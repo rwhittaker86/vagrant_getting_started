@@ -1,9 +1,10 @@
-# cleanup script to run on vagrant halt/suspend/destroy
-
+# #!/usr/bin/env bash
 cd /vagrant
-
-if [[ `git status --porcelain` ]]; then
+if  [[ `git status --porcelain` ]]  
+then
 	git add -A
-	git commit -m '/$(date  -d "today" +"%Y%m%d%H%M") auto-backup'
+	git reset -- .vagrant/*
+	git reset -- bootstrap.sh
+	git commit -m '/$(date +"%Y%m%d%H%M") auto-backup'
 	git push
 fi
