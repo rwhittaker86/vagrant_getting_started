@@ -7,5 +7,5 @@ then
 	git reset -- bootstrap.sh
 	git reset -- cleanup.sh
 	git commit -m '`date` auto-backup'
-	git push https://[your username]:[your password]@github.com/rwhittaker86/vagrant_getting_started
+	git push https://[your username]:[your password]@github.com/[your username]/[your repo].git
 fi
