@@ -5,6 +5,7 @@ then
 	git add -A
 	git reset -- .vagrant/*
 	git reset -- bootstrap.sh
-	git commit -m '/$(date +"%Y%m%d%H%M") auto-backup'
-	git push
+	git reset -- cleanup.sh
+	git commit -m '`date` auto-backup'
+	git push https://[your username]:[your password]@github.com/rwhittaker86/vagrant_getting_started
 fi
